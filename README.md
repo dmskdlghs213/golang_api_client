@@ -1,1 +1,1 @@
-# golang_concurrency_practice
+# golang_api_client
