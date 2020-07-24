@@ -6,12 +6,13 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/labstack/gommon/log"
 	"github.com/pkg/errors"
 )
 
 func TestClient() (string, error) {
 
-	ctx, cancel := context.WithTimeout(context.Background(), time.Second * 5)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second*5)
 	defer cancel()
 
 	req, err := http.NewRequest("GET", "http://localhost:8080/test", nil)
@@ -38,6 +39,8 @@ func TestClient() (string, error) {
 	if err != nil {
 		return "", errors.Wrap(err, "response body reading error")
 	}
+
+	log.Info("request success, request body", string(body))
 
 	return string(body), nil
 }
