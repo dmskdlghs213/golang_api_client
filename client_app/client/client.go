@@ -2,11 +2,11 @@ package client
 
 import (
 	"context"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"time"
 
-	"github.com/labstack/gommon/log"
 	"github.com/pkg/errors"
 )
 
@@ -40,7 +40,7 @@ func TestClient() (string, error) {
 		return "", errors.Wrap(err, "response body reading error")
 	}
 
-	log.Info("request success, request body", string(body))
+	fmt.Println(string(body))
 
 	return string(body), nil
 }

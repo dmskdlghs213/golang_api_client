@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/dmskdlghs213/golang_api_client/server_app/server"
+	"github.com/dmskdlghs213/golang_api_client_and_server/server_app/server"
 	"github.com/labstack/echo"
 )
 

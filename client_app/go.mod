@@ -1,4 +1,4 @@
-module github.com/dmskdlghs213/golang_api_client/client_app
+module github.com/dmskdlghs213/golang_api_client_and_server/client_app
 
 go 1.13
 
