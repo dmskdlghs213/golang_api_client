@@ -1,1 +1,1 @@
-# golang_api_client
+# golang_api_client_and_server
